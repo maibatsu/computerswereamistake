@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computers were a mistake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', event => {
+            const { timeZone } = Intl.DateTimeFormat().resolvedOptions();
+            const options = {
+                timeZone,
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+            };
+            const formatter = new Intl.DateTimeFormat([], options);
+
+            setInterval(() => {
+                document.querySelector("#time").innerText = formatter.format(new Date());
+            }, 1000)
+        });
+    </script>
+
+    <main>
+        <h1>Computers were a mistake</h1>
+        <button type="button">Accept it</button>
+    </main>
+    <footer><span>est. 2024</span><br /><time id="time"></time></footer>
+</body>
+
+</html>

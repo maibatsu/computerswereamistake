@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+    height: 100%;
+}
+
+main h1 {
+    margin: auto;
+}
+
+main button {
+    margin: auto;
+}
